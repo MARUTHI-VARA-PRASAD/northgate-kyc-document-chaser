@@ -1,90 +1,79 @@
 $ErrorActionPreference = "Stop"
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$configPath = Join-Path $root "deploy.local.ps1"
+$envPath = Join-Path $root ".env"
 
-if (-not (Test-Path -LiteralPath $configPath)) {
-  throw "Missing deploy.local.ps1. Copy deploy.local.ps1.example, fill in the values, and run this script again."
+if (-not (Test-Path -LiteralPath $envPath -PathType Leaf)) {
+  throw "Missing .env. Open .env and set GCP_PROJECT_ID before deploying."
 }
 
-. $configPath
-
-$required = @{
-  GcpProjectId = $GcpProjectId
-  GcpRegion = $GcpRegion
-  ArtifactRepository = $ArtifactRepository
-  CloudRunService = $CloudRunService
-  GcpCredentialsFile = $GcpCredentialsFile
-}
-
-foreach ($entry in $required.GetEnumerator()) {
-  if ([string]::IsNullOrWhiteSpace([string]$entry.Value) -or [string]$entry.Value.StartsWith("YOUR_")) {
-    throw "Set $($entry.Key) in deploy.local.ps1 before deploying."
+$settings = @{}
+Get-Content -LiteralPath $envPath | ForEach-Object {
+  $line = $_.Trim()
+  if ([string]::IsNullOrWhiteSpace($line) -or $line.StartsWith("#")) {
+    return
   }
+
+  $separator = $line.IndexOf("=")
+  if ($separator -lt 1) {
+    throw "Invalid .env line. Expected KEY=VALUE."
+  }
+
+  $name = $line.Substring(0, $separator).Trim()
+  $value = $line.Substring($separator + 1).Trim()
+  if ($value.Length -ge 2 -and (($value.StartsWith('"') -and $value.EndsWith('"')) -or ($value.StartsWith("'") -and $value.EndsWith("'")))) {
+    $value = $value.Substring(1, $value.Length - 2)
+  }
+  $settings[$name] = $value
 }
 
-if (-not (Test-Path -LiteralPath $GcpCredentialsFile -PathType Leaf)) {
-  throw "Credential file not found: $GcpCredentialsFile"
+$projectId = $settings["GCP_PROJECT_ID"]
+$region = if ($settings["GCP_REGION"]) { $settings["GCP_REGION"] } else { "us-central1" }
+$repository = if ($settings["ARTIFACT_REPOSITORY"]) { $settings["ARTIFACT_REPOSITORY"] } else { "northgate-apps" }
+
+if ([string]::IsNullOrWhiteSpace($projectId) -or $projectId.StartsWith("YOUR_")) {
+  throw "Set your GCP project ID in .env: GCP_PROJECT_ID=your-project-id"
 }
 
 if (-not (Get-Command gcloud -ErrorAction SilentlyContinue)) {
-  throw "gcloud CLI is not installed or not on PATH. Install Google Cloud CLI, restart PowerShell, and run this script again."
-}
-
-if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
-  throw "Docker CLI is not installed or not on PATH. Install Docker Desktop, start it, and run this script again."
+  throw "Google Cloud CLI is not installed. Install it from https://cloud.google.com/sdk/docs/install and run this script again."
 }
 
 Set-Location $root
 
-Write-Host "Authenticating to Google Cloud..."
-& gcloud auth activate-service-account --key-file="$GcpCredentialsFile" --quiet
-& gcloud config set project "$GcpProjectId" --quiet
-
-Write-Host "Enabling required APIs..."
-& gcloud services enable run.googleapis.com artifactregistry.googleapis.com --project="$GcpProjectId"
-
-Write-Host "Creating or reusing Artifact Registry repository..."
-& gcloud artifacts repositories create "$ArtifactRepository" `
-  --repository-format=docker `
-  --location="$GcpRegion" `
-  --description="Docker repository for Northgate KYC Chaser" `
-  --project="$GcpProjectId" `
-  --quiet
+Write-Host "Opening Google Cloud sign-in..."
+& gcloud auth login
 if ($LASTEXITCODE -ne 0) {
-  Write-Host "Repository already exists or could not be created; continuing to verify access."
+  throw "Google Cloud sign-in failed."
 }
 
-& gcloud auth configure-docker "$GcpRegion-docker.pkg.dev" --quiet
+& gcloud config set project $projectId
+if ($LASTEXITCODE -ne 0) {
+  throw "Could not select project '$projectId'. Check the project ID and your company account access."
+}
 
-Write-Host "Building TypeScript application..."
-& npm ci
-& npm run build
+Write-Host "Enabling required Google Cloud services..."
+& gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com --project=$projectId
+if ($LASTEXITCODE -ne 0) {
+  throw "Could not enable required services. Ask your GCP administrator for permission."
+}
 
-$image = "$GcpRegion-docker.pkg.dev/$GcpProjectId/$ArtifactRepository/$CloudRunService`:manual"
+& gcloud artifacts repositories describe $repository --location=$region --project=$projectId *> $null
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "Creating Artifact Registry repository '$repository'..."
+  & gcloud artifacts repositories create $repository --repository-format=docker --location=$region --project=$projectId --description="Northgate KYC Chaser Docker images"
+  if ($LASTEXITCODE -ne 0) {
+    throw "Could not create or access Artifact Registry repository '$repository'."
+  }
+}
 
-Write-Host "Building and pushing Docker image..."
-& docker build --tag $image .
-& docker push $image
+Write-Host "Building and deploying with Google Cloud Build..."
+& gcloud builds submit --config cloudbuild.yaml --project=$projectId --substitutions=_REGION=$region,_REPOSITORY=$repository .
+if ($LASTEXITCODE -ne 0) {
+  throw "Deployment failed. Review the Cloud Build error above."
+}
 
-Write-Host "Deploying to Cloud Run..."
-& gcloud run deploy "$CloudRunService" `
-  --image="$image" `
-  --region="$GcpRegion" `
-  --project="$GcpProjectId" `
-  --platform=managed `
-  --allow-unauthenticated `
-  --port=8080 `
-  --memory=256Mi `
-  --cpu=1 `
-  --min-instances=0 `
-  --max-instances=5
-
-$serviceUrl = & gcloud run services describe "$CloudRunService" `
-  --region="$GcpRegion" `
-  --project="$GcpProjectId" `
-  --format="value(status.url)"
-
+$serviceUrl = & gcloud run services describe northgate-kyc-chaser --region=$region --project=$projectId --format="value(status.url)"
 Write-Host ""
 Write-Host "Deployment complete."
 Write-Host "URL: $serviceUrl"
