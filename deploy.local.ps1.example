@@ -1,0 +1,10 @@
+# Copy this file to deploy.local.ps1 and replace the placeholder values.
+# Never commit deploy.local.ps1 or the service-account JSON file.
+
+$GcpProjectId = "YOUR_GCP_PROJECT_ID"
+$GcpRegion = "us-central1"
+$ArtifactRepository = "northgate-apps"
+$CloudRunService = "northgate-kyc-chaser"
+
+# Absolute path to the downloaded Google Cloud service-account JSON file.
+$GcpCredentialsFile = "C:\secure\gcp\northgate-deployer.json"

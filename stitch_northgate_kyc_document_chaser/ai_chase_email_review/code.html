@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#eaf1ff", "inverse-surface": "#213145", "secondary": "#515f74", "primary-fixed-dim": "#b0c8eb", "surface-variant": "#d3e4fe", "tertiary-fixed-dim": "#6bd8cb", "surface-container-high": "#dce9ff", "surface-container-low": "#eff4ff", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#005049", "error": "#ba1a1a", "on-tertiary-fixed": "#00201d", "primary": "#000f22", "primary-container": "#0a2540", "on-secondary": "#ffffff", "surface-tint": "#49607e", "surface-bright": "#f8f9ff", "surface-container": "#e5eeff", "on-tertiary": "#ffffff", "tertiary-container": "#002a26", "tertiary": "#001210", "surface-container-highest": "#d3e4fe", "outline-variant": "#c4c6ce", "surface": "#f8f9ff", "background": "#f8f9ff", "secondary-fixed": "#d5e3fc", "tertiary-fixed": "#89f5e7", "primary-fixed": "#d2e4ff", "on-secondary-container": "#57657a", "on-error": "#ffffff", "inverse-primary": "#b0c8eb", "on-surface": "#0b1c30", "on-surface-variant": "#43474d", "error-container": "#ffdad6", "surface-dim": "#cbdbf5", "on-error-container": "#93000a", "on-tertiary-container": "#1f9c8f", "on-secondary-fixed-variant": "#3a485b", "secondary-fixed-dim": "#b9c7df", "on-background": "#0b1c30", "on-primary-fixed-variant": "#314865", "outline": "#74777e", "on-primary-container": "#768dad", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#001c37", "on-secondary-fixed": "#0d1c2e", "secondary-container": "#d5e3fc" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-md": "0.75rem", "space-lg": "1rem", "space-xl": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(10,37,64,0.06)]"><div class="h-28 w-full px-margin-desktop flex flex-col justify-between pt-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">NORTHGATE</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fintech Suite • KYC Chaser</span></div></div><div class="h-4 w-px bg-surface-container-high hidden md:block"></div><div class="hidden md:flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">corporate_fare</span><span>Corporate Banking Division</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">Institutional Onboarding</span></div></div><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-md text-right"><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Priya Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant">RM Lead • APAC Compliance</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div><nav class="flex items-center gap-space-xl" data-active-classes="text-primary font-headline-sm border-b-2 border-primary"><a class="h-10 inline-flex items-center px-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="case-overview-&-checklist" href="#">1. Intake & Checklist</a><a aria-current="page" class="h-10 inline-flex items-center px-space-xs transition-colors text-primary font-headline-sm border-b-2 border-primary" data-path="ai-chase-email-&-review" href="#">2. AI Chase & Approval</a><a class="h-10 inline-flex items-center px-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="sla-rules-&-follow-up" href="#">3. SLA & Reminders</a><a class="h-10 inline-flex items-center px-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="coo-impact-&-metrics" href="#">4. Executive Analytics</a></nav></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Breadcrumbs & Status Indicator Bar -->
+<div class="w-full px-margin-desktop py-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Cases</a>
+<span class="text-outline-variant">/</span>
+<span class="font-semibold text-on-surface">NG-KYC-2026-001</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-bold">AI Chase & Review Gate</span>
+<span class="ml-space-sm px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Stage 2 of 4</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span>Awaiting RM Sign-Off</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+<span>SLA Timer: <strong>18h 42m remaining</strong></span>
+</div>
+</div>
+</div>
+<!-- Context Summary Banner: 4 Outstanding Documents -->
+<div class="w-full px-margin-desktop mb-space-xl">
+<div class="w-full bg-surface-container-low rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">Apex Manufacturing Pvt. Ltd.</h1>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold tracking-wider">PVT LTD • MID-MARKET</span>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">HIGH VELOCITY KYC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">
+              Contact: Rajesh Singhania (MD) • rajesh.singhania@apexmanuf.in • Primary RM: Priya Sharma (APAC Commercial)
+            </p>
+</div>
+</div>
+<!-- 4 Flagged Missing Documents Quick Strip -->
+<div class="flex items-center gap-space-sm flex-wrap shrink-0">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-error">assignment_late</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Certificate of Inc.</span>
+<span class="font-label-md text-label-md font-semibold text-error">ROC Stamped Missing</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-error">pie_chart</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Shareholding</span>
+<span class="font-label-md text-label-md font-semibold text-error">>10% Equity Breakdown</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-error">badge</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">UBO Passports/IDs</span>
+<span class="font-label-md text-label-md font-semibold text-error">2 of 3 Unverified</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-error">home_pin</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Proof of Address</span>
+<span class="font-label-md text-label-md font-semibold text-error">Lease Deed Expired</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Safety Guardrail Banner -->
+<div class="w-full px-margin-desktop mb-space-lg">
+<div class="w-full bg-secondary-container rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-space-xs">
+            Mandatory Compliance Safety Guardrail
+            <span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm uppercase">Draft Isolation</span>
+</span>
+<p class="font-body-sm text-body-sm text-secondary">
+            AI-generated chase drafts remain fully isolated. Under Northgate Governance Charter §4.1, no automatic outbound client dispatch occurs without manual Relationship Manager authorization.
+          </p>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs shrink-0 font-label-sm text-label-sm font-mono text-secondary bg-surface-container-lowest px-space-sm py-1 rounded">
+<span>SECURITY LEVEL: RM-AUTHORITY-L2</span>
+</div>
+</div>
+</div>
+<!-- 2-Column High Density Workspace -->
+<div class="w-full px-margin-desktop mb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- MAIN / LEFT COLUMN: AI Chase Email Composer (7 Cols) -->
+<section class="lg:col-span-7 flex flex-col gap-space-lg min-w-0">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Card Header & Metadata -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-container">smart_toy</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">AI Draft Engine</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model: Northgate AML-Orchestrator v4.2 • Tuned for Indian ROC Regulations</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">Formal • Institutional</span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">Confidence 99.4%</span>
+</div>
+</div>
+<!-- Subject Line Composer -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold" for="email-subject">Outbound Subject Line</label>
+<span class="font-label-sm text-label-sm text-secondary font-mono">CHARS: <span id="char-count">65</span></span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 text-secondary material-symbols-outlined text-[18px]">mail</span>
+<input class="w-full pl-10 pr-4 py-space-sm bg-surface-container-low rounded text-primary font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="email-subject" type="text" value="Action Required: Pending KYC Documents – Apex Manufacturing Pvt. Ltd."/>
+</div>
+</div>
+<!-- Client Recipient Pills -->
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-low p-space-sm rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold mr-space-xs">Recipients:</span>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-0.5 rounded text-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container">person</span>
+<span>Rajesh Singhania <rajesh.singhania@apexmanuf.in></span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-0.5 rounded text-primary font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container">group</span>
+<span>compliance@apexmanuf.in</span>
+</div>
+<div class="ml-auto text-on-surface-variant font-label-sm text-label-sm">
+<span>BCC: compliance-audit@northgate.bank</span>
+</div>
+</div>
+<!-- Email Preview / Editable Text Area -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold flex items-center gap-space-xs" for="email-draft-content">
+<span>Composed Message Preview</span>
+<span class="font-body-sm text-body-sm text-secondary font-normal">(Directly editable by RM)</span>
+</label>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Generated 4 mins ago</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-container-low shadow-inner">
+<textarea class="w-full p-space-lg bg-surface-container-lowest text-primary font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary leading-relaxed resize-y shadow-sm font-sans" id="email-draft-content" rows="14">Dear Mr. Singhania & Corporate Team,
+
+Re: Corporate KYC Onboarding – Apex Manufacturing Pvt. Ltd. (Case Ref: NG-KYC-2026-001)
+
+Thank you for partnering with Northgate Commercial Banking. To complete your institutional onboarding without operational delays, our compliance review has identified 4 pending statutory documents required upfront:
+
+1. Certified copy of Certificate of Incorporation (ROC stamped)
+2. Latest signed Shareholding Structure (>10% equity breakdown)
+3. Official UBO Identification documents for beneficial owners
+4. Proof of Registered Business Address (utility bill or registered lease deed)
+
+Please submit these through Northgate's secure portal link: https://portal.northgate.bank/onboard/NG-KYC-2026-001
+
+Kind regards,
+Priya Sharma | RM Commercial Banking
+Northgate Financial Group • APAC Compliance Desk</textarea>
+</div>
+</div>
+<!-- Composer Interactive Tooling / Action Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Action: Copy Text -->
+<button class="h-9 px-space-md bg-surface-container-low text-primary hover:bg-surface-container transition-all rounded font-label-md text-label-md flex items-center gap-space-xs active:scale-95 shadow-sm" id="btn-copy" onclick="copyEmailText()" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copy-label">Copy Text</span>
+</button>
+<!-- Action: Regenerate Draft -->
+<button class="h-9 px-space-md bg-surface-container-low text-primary hover:bg-surface-container transition-all rounded font-label-md text-label-md flex items-center gap-space-xs active:scale-95 shadow-sm" id="btn-regenerate" onclick="regenerateDraft()" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" id="regen-icon">auto_awesome</span>
+<span id="regen-label">Regenerate Draft</span>
+</button>
+<!-- Action: Reset to Default -->
+<button class="h-9 px-space-md text-secondary hover:text-primary transition-all rounded font-label-md text-label-md flex items-center gap-space-xs" id="btn-reset" onclick="resetDefaultText()" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset to Default</span>
+</button>
+</div>
+<!-- Dynamic Word/Token Count Badge -->
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span id="word-count-display">109 words • Read time: 30s</span>
+</div>
+</div>
+</div>
+<!-- AI Tone & Regulatory Adherence Metrics -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold block mb-space-sm">Automated Linguistic & Compliance Checks</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Courtesy Score</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">98 / 100</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Formal commercial tone</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Document Parity</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">4 of 4 Matched</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% checklist alignment</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Security Protocol</span>
+<span class="font-headline-sm text-headline-sm text-tertiary-container font-bold mt-0.5">Zero Plaintext PII</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tokens hashed & sandboxed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT / SIDE COLUMN: RM Review & Approval Gate (5 Cols) -->
+<section class="lg:col-span-5 flex flex-col gap-space-lg min-w-0">
+<!-- Primary RM Approval Gate Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-primary text-on-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">RM Approval Gate</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 2 Dual-Control Validation</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider" id="gate-badge">
+              Pending Sign-Off
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Under FINTECH & AML regulatory frameworks, the Relationship Manager assumes legal ownership of all outbound communications and verification demands dispatched to institutional counterparties.
+          </p>
+<!-- Interactive Review Checklist -->
+<div class="flex flex-col gap-space-md p-space-md rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Pre-Dispatch Attestation Checklist</span>
+<!-- Checkbox 1 -->
+<label class="flex items-start gap-space-md cursor-pointer group">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" id="chk-risk-profile" onchange="evaluateApprovalGate()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors leading-snug select-none">
+<strong>Requirement Validity:</strong> I have reviewed the missing-document list against corporate entity risk profile (Apex Manufacturing Pvt. Ltd. ROC Registry).
+              </span>
+</label>
+<!-- Checkbox 2 -->
+<label class="flex items-start gap-space-md cursor-pointer group">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" id="chk-recipient-tone" onchange="evaluateApprovalGate()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors leading-snug select-none">
+<strong>Clarity & Security:</strong> I have verified the email text, upload instructions, customer portal hash link, and institutional recipient tone.
+              </span>
+</label>
+</div>
+<!-- Dynamic Status Visual Panel -->
+<div class="p-space-md rounded-lg bg-surface-container text-secondary transition-all" id="status-card-box">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary" id="status-icon">pending_actions</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface" id="status-heading">Status: Gate Locked</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="status-subtext">Complete both attestation checkboxes above to authorize outbound dispatch.</span>
+</div>
+</div>
+</div>
+<!-- Prominent Approval CTA Button -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full h-11 bg-primary text-on-primary font-headline-sm text-headline-sm rounded flex items-center justify-center gap-space-sm opacity-40 cursor-not-allowed shadow-md transition-all active:scale-98" disabled="" id="btn-approve" onclick="handleApproveDispatch()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="approve-icon">lock</span>
+<span id="approve-label">Approve & Mark Ready to Send</span>
+</button>
+<span class="font-label-sm text-label-sm text-center text-on-surface-variant">Cryptographic signature will be generated with RM Priya Sharma's credentials.</span>
+</div>
+<!-- Audit Log Snippet -->
+<div class="pt-space-md bg-surface-container-lowest">
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm uppercase font-semibold mb-space-xs">
+<span>Audit Trail (NG-KYC-2026-001)</span>
+<span>Node 04</span>
+</div>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center justify-between">
+<span>• AI Draft Engine initial generation</span>
+<span class="font-mono text-[11px] text-secondary">10:14:02 UTC</span>
+</li>
+<li class="flex items-center justify-between">
+<span>• ROC entity registry cross-checked</span>
+<span class="font-mono text-[11px] text-secondary">10:14:18 UTC</span>
+</li>
+<li class="flex items-center justify-between" id="audit-rm-entry">
+<span>• Pending RM manual verification</span>
+<span class="font-mono text-[11px] text-secondary">--:--:--</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Case Metadata & Assigned Stakeholder Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Stakeholder Dossier</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">ID: APX-9942</span>
+</div>
+<div class="flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shrink-0" data-alt="Close up professional portrait of Indian corporate executive Rajesh Singhania in a modern banking office wearing charcoal business suit, soft studio lighting, sharp focus, corporate executive aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB75uP253F0ZyXbO5MV3qCNCmJ8GKiMKKo6qoyuWkvvKf8jJldQRLN9Ifke__0tFMau2VvWW1cWmVaZDMm43BocxNLycAttTSRna5IJMXFYmwnoRMSuQJy5MVcd7QfKR-19kkka363_Xxbsxqm-Kg2jltcWe4nuO-pHBOJ-e4y1zQnAHut288LyN72xFShIly7iit1OCXPHxchmx9eSZHlKl4MYJFQO3sIyjaq3Q4DX"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-primary truncate">Rajesh Singhania</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Managing Director & 38% Equity Holder</span>
+<span class="font-label-sm text-label-sm text-secondary mt-0.5">DIN: 08492019 • Res: Mumbai, IND</span>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">KYC Completion Metric:</span>
+<span class="text-primary font-bold font-mono">42% (3 / 7 items)</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+<!-- Secondary Inter-Step Navigation Buttons -->
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<a class="h-10 px-space-md rounded bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-lg text-label-lg flex items-center gap-space-xs" data-path="case-overview-&-checklist" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Checklist</span>
+</a>
+<a class="h-10 px-space-lg rounded bg-primary-container text-on-primary hover:bg-primary transition-colors font-label-lg text-label-lg flex items-center gap-space-xs shadow-sm ml-auto" data-path="sla-rules-&-follow-up" href="#" id="btn-continue-sla">
+<span>Continue to SLA & Reminders</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+<!-- Inline Micro-interaction Script -->
+<script>
+    (function initApprovalGate() {
+      const chkRisk = document.getElementById('chk-risk-profile');
+      const chkTone = document.getElementById('chk-recipient-tone');
+      const btnApprove = document.getElementById('btn-approve');
+      const approveIcon = document.getElementById('approve-icon');
+      const approveLabel = document.getElementById('approve-label');
+      const gateBadge = document.getElementById('gate-badge');
+      const statusBox = document.getElementById('status-card-box');
+      const statusHeading = document.getElementById('status-heading');
+      const statusSubtext = document.getElementById('status-subtext');
+      const statusIcon = document.getElementById('status-icon');
+      const emailContent = document.getElementById('email-draft-content');
+      const emailSubject = document.getElementById('email-subject');
+      const charCount = document.getElementById('char-count');
+      const wordCountDisplay = document.getElementById('word-count-display');
+      const auditRmEntry = document.getElementById('audit-rm-entry');
+
+      const originalDefaultDraft = emailContent.value;
+      let isApproved = false;
+
+      // Update subject character counter
+      emailSubject.addEventListener('input', (e) => {
+        charCount.textContent = e.target.value.length;
+      });
+
+      // Update word count
+      emailContent.addEventListener('input', (e) => {
+        const words = e.target.value.trim().split(/\s+/).filter(Boolean).length;
+        const readTime = Math.ceil(words / 200 * 60);
+        wordCountDisplay.textContent = words + " words • Read time: ~" + readTime + "s";
+      });
+
+      window.evaluateApprovalGate = function() {
+        if (isApproved) return;
+        const bothChecked = chkRisk.checked && chkTone.checked;
+        if (bothChecked) {
+          btnApprove.disabled = false;
+          btnApprove.classList.remove('opacity-40', 'cursor-not-allowed');
+          btnApprove.classList.add('cursor-pointer', 'hover:bg-primary-container');
+          approveIcon.textContent = 'verified';
+          
+          statusBox.classList.remove('bg-surface-container');
+          statusBox.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed-variant');
+          statusHeading.textContent = 'Status: Checklist Verified';
+          statusHeading.classList.add('text-on-tertiary-fixed');
+          statusSubtext.textContent = 'Dual criteria verified. Click below to officially authorize queue dispatch.';
+          statusSubtext.classList.remove('text-on-surface-variant');
+          statusSubtext.classList.add('text-on-tertiary-fixed-variant');
+          statusIcon.textContent = 'check_circle';
+          statusIcon.classList.remove('text-secondary');
+          statusIcon.classList.add('text-on-tertiary-fixed');
+        } else {
+          btnApprove.disabled = true;
+          btnApprove.classList.add('opacity-40', 'cursor-not-allowed');
+          btnApprove.classList.remove('cursor-pointer', 'hover:bg-primary-container');
+          approveIcon.textContent = 'lock';
+
+          statusBox.classList.add('bg-surface-container');
+          statusBox.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed-variant');
+          statusHeading.textContent = 'Status: Gate Locked';
+          statusHeading.classList.remove('text-on-tertiary-fixed');
+          statusSubtext.textContent = 'Complete both attestation checkboxes above to authorize outbound dispatch.';
+          statusSubtext.classList.add('text-on-surface-variant');
+          statusSubtext.classList.remove('text-on-tertiary-fixed-variant');
+          statusIcon.textContent = 'pending_actions';
+          statusIcon.classList.add('text-secondary');
+          statusIcon.classList.remove('text-on-tertiary-fixed');
+        }
+      };
+
+      window.handleApproveDispatch = function() {
+        if (!chkRisk.checked || !chkTone.checked) return;
+        isApproved = true;
+        
+        // Lock controls
+        chkRisk.disabled = true;
+        chkTone.disabled = true;
+        btnApprove.disabled = true;
+        btnApprove.classList.remove('bg-primary', 'hover:bg-primary-container');
+        btnApprove.classList.add('bg-emerald-700', 'text-on-primary', 'cursor-default', 'opacity-100');
+        
+        approveIcon.textContent = 'task_alt';
+        approveLabel.textContent = 'Status: Approved & Ready for Dispatch';
+        
+        gateBadge.textContent = 'Authorized by RM';
+        gateBadge.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        gateBadge.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+
+        statusHeading.textContent = 'Signed by RM Priya Sharma';
+        statusSubtext.textContent = 'Case NG-KYC-2026-001 queued for dispatch via Northgate Outbound Gateway.';
+
+        const now = new Date();
+        const timeStr = now.toISOString().substring(11, 19) + ' UTC';
+        auditRmEntry.innerHTML = '<span>• Outbound authorized by RM Priya Sharma</span><span class="font-mono text-[11px] text-tertiary-container font-bold">' + timeStr + '</span>';
+      };
+
+      window.copyEmailText = function() {
+        const textToCopy = emailSubject.value + '\n\n' + emailContent.value;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const lbl = document.getElementById('copy-label');
+          lbl.textContent = 'Copied to Clipboard!';
+          setTimeout(() => { lbl.textContent = 'Copy Text'; }, 2000);
+        }).catch(() => {
+          const lbl = document.getElementById('copy-label');
+          lbl.textContent = 'Copied!';
+          setTimeout(() => { lbl.textContent = 'Copy Text'; }, 2000);
+        });
+      };
+
+      window.regenerateDraft = function() {
+        const btnRegen = document.getElementById('btn-regenerate');
+        const regenLabel = document.getElementById('regen-label');
+        const regenIcon = document.getElementById('regen-icon');
+        
+        regenIcon.classList.add('animate-spin');
+        regenLabel.textContent = 'Generating...';
+        btnRegen.disabled = true;
+
+        setTimeout(() => {
+          emailSubject.value = 'Urgent Notice: Outstanding Corporate KYC Compliance Documents – Apex Manufacturing Pvt. Ltd.';
+          charCount.textContent = emailSubject.value.length;
+          
+          emailContent.value = `Dear Mr. Rajesh Singhania & Institutional Onboarding Committee,
+
+Case Reference: NG-KYC-2026-001 (Apex Manufacturing Pvt. Ltd.)
+
+Northgate Commercial Banking has concluded preliminary risk assessment for your operational treasury account. Under Indian Banking Regulation AML/CFT protocols, we must secure the remaining 4 mandatory statutory filings before account activation:
+
+1. Certificate of Incorporation (ROC verified & certified true copy)
+2. Shareholding Pattern Schedule (signed by Company Secretary, detailing >10% ownership)
+3. Direct UBO Identification Passports / Aadhaar for primary stakeholders
+4. Principal Place of Business Verification (registered lease deed within 90 days validity)
+
+Please upload these files through your priority encrypted bank link:
+https://portal.northgate.bank/onboard/NG-KYC-2026-001
+
+Our team is available for real-time document validation upon receipt.
+
+Best regards,
+Priya Sharma
+Lead Relationship Manager | Commercial Banking
+Northgate Financial Group`;
+
+          const words = emailContent.value.trim().split(/\s+/).filter(Boolean).length;
+          const readTime = Math.ceil(words / 200 * 60);
+          wordCountDisplay.textContent = words + " words • Read time: ~" + readTime + "s";
+
+          regenIcon.classList.remove('animate-spin');
+          regenLabel.textContent = 'Draft Regenerated';
+          btnRegen.disabled = false;
+          setTimeout(() => { regenLabel.textContent = 'Regenerate Draft'; }, 2500);
+        }, 800);
+      };
+
+      window.resetDefaultText = function() {
+        emailSubject.value = 'Action Required: Pending KYC Documents – Apex Manufacturing Pvt. Ltd.';
+        charCount.textContent = emailSubject.value.length;
+        emailContent.value = originalDefaultDraft;
+        const words = emailContent.value.trim().split(/\s+/).filter(Boolean).length;
+        wordCountDisplay.textContent = words + " words • Read time: ~30s";
+      };
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl mt-space-xl shadow-[0_1px_8px_rgba(10,37,64,0.04)]"><div class="w-full px-margin-desktop flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm font-label-md text-label-md text-primary font-semibold"><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified_user</span><span>NORTHGATE INSTITUTIONAL RISK • RESTRICTED DISTRIBUTION</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Strictly Confidential. For authorized Relationship Managers and MLRO compliance officers only. All verification actions and automated dispatch requests are cryptographically audited under AML/CFT regulations.</p></div><div class="flex items-center gap-space-xl shrink-0 font-label-md text-label-md"><span class="text-on-surface-variant">© 2025 Northgate Financial Group</span><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Audit Log Policy</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Escalation Matrix</a></div></div></footer></body></html>
